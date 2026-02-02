@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WWW.NETFLIX.COM</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+  <header>
+    <div
+      class="w-full 
+         h-[70vh] sm:h-screen 
+         bg-[url('https://assets.nflxext.com/ffe/siteui/vlv3/797df41b-1129-4496-beb3-6fc2f29c59d3/web/IN-en-20260112-TRIFECTA-perspective_004732f9-7464-4a7c-940b-4a51c4f0f73f_large.jpg')]
+         bg-cover 
+         bg-center 
+         bg-no-repeat
+         relative">
+        <div class="grid grid-cols-2 mx-auto">
+         <div class=" max-w-[1200px]
+                         w-[89px] sm:w-[148px] h-[40px] ml-[16px] sm:ml-[120px] mt-[20px] ">
+
+          <a href="#">
+            <svg viewBox="0 0 111 30" fill="red"version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="default-ltr-iqcdef-cache-17hp4kx e38gzvf2"><g><path d="M105.06233,14.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L102.374168,20.4686475 L98.9371075,28.4375293 C97.2499766,28.1563408 95.5928391,28.061674 93.9057081,27.8432843 L99.9372012,14.0931671 L94.4680851,-5.68434189e-14 L99.5313525,-5.68434189e-14 L102.593495,7.87421502 L105.874965,-5.68434189e-14 L110.999156,-5.68434189e-14 L105.06233,14.2806261 Z M90.4686475,-5.68434189e-14 L85.8749649,-5.68434189e-14 L85.8749649,27.2499766 C87.3746368,27.3437061 88.9371075,27.4055675 90.4686475,27.5930265 L90.4686475,-5.68434189e-14 Z M81.9055207,26.93692 C77.7186241,26.6557316 73.5307901,26.4064111 69.250164,26.3117443 L69.250164,-5.68434189e-14 L73.9366389,-5.68434189e-14 L73.9366389,21.8745899 C76.6248008,21.9373887 79.3120255,22.1557784 81.9055207,22.2804387 L81.9055207,26.93692 Z M64.2496954,10.6561065 L64.2496954,15.3435186 L57.8442216,15.3435186 L57.8442216,25.9996251 L53.2186709,25.9996251 L53.2186709,-5.68434189e-14 L66.3436123,-5.68434189e-14 L66.3436123,4.68741213 L57.8442216,4.68741213 L57.8442216,10.6561065 L64.2496954,10.6561065 Z M45.3435186,4.68741213 L45.3435186,26.2498828 C43.7810479,26.2498828 42.1876465,26.2498828 40.6561065,26.3117443 L40.6561065,4.68741213 L35.8121661,4.68741213 L35.8121661,-5.68434189e-14 L50.2183897,-5.68434189e-14 L50.2183897,4.68741213 L45.3435186,4.68741213 Z M30.749836,15.5928391 C28.687787,15.5928391 26.2498828,15.5928391 24.4999531,15.6875059 L24.4999531,22.6562939 C27.2499766,22.4678976 30,22.2495079 32.7809542,22.1557784 L32.7809542,26.6557316 L19.812541,27.6876933 L19.812541,-5.68434189e-14 L32.7809542,-5.68434189e-14 L32.7809542,4.68741213 L24.4999531,4.68741213 L24.4999531,10.9991564 C26.3126816,10.9991564 29.0936358,10.9054269 30.749836,10.9054269 L30.749836,15.5928391 Z M4.78114163,12.9684132 L4.78114163,29.3429562 C3.09401069,29.5313525 1.59340144,29.7497422 0,30 L0,-5.68434189e-14 L4.4690224,-5.68434189e-14 L10.562377,17.0315868 L10.562377,-5.68434189e-14 L15.2497891,-5.68434189e-14 L15.2497891,28.061674 C13.5935889,28.3437998 11.906458,28.4375293 10.1246602,28.6868498 L4.78114163,12.9684132 Z"></path></g></svg>
+          </a>
+         </div>
+         <div class="flex items-center gap-4 mt-[20px]
+            ml-4 sm:ml-[250px]">
+  
+  <select
+    class="text-white border border-gray-400
+           w-[100px] sm:w-[134px]
+           h-[32px]
+           bg-black
+           text-center rounded"
+  >
+    <option>English</option>
+    <option>Hindi</option>
+  </select>
+
+  <button id="signbtn"
+    class="text-white bg-red-600
+           w-[76.9px]
+           h-[32px]
+           rounded-md
+           text-center"
+  >
+    Sign In
+  </button>
+  <div
+  id="overlay"
+  class="fixed inset-0 bg-black/60 hidden z-40">
+</div>
+<div
+  id="popup"
+  class="fixed top-0 right-0 h-screen w-[450px]
+         bg-gradient-to-b from-[#4b0f12] to-black
+         translate-x-full transition-transform duration-500 ease-in-out
+         z-50 text-white px-10 py-14"
+>
+  <h1 class="text-3xl font-bold mb-2">
+    Enter your info to sign in
+  </h1>
+
+  <p class="text-gray-300 mb-8">
+    Or get started with a new account.
+  </p>
+
+  <input
+    type="text"
+    placeholder="Email or mobile number"
+    class="w-full bg-transparent border border-gray-500
+           px-4 py-3 rounded mb-6 focus:outline-none"
+  />
+
+  <button
+    class="w-full bg-red-600 py-3 rounded font-semibold mb-6">
+    Continue
+  </button>
+
+  <div class="flex items-center gap-2 text-sm mb-10 cursor-pointer">
+    <span>Get Help</span>
+    <span>⌄</span>
+  </div>
+
+  <p class="text-xs text-gray-400">
+    This page is protected by Google reCAPTCHA to ensure you're not a bot.
+    <span class="text-blue-400 cursor-pointer">Learn more</span>
+  </p>
+
+  <button
+    id="closeBtn"
+    class="absolute top-6 right-6 text-xl">
+    ✕
+  </button>
+</div>
+
+
+</div>
+
+</div>
+
+        
+<div class="flex flex-col items-center px-4">
+  <div class="max-w-[600px] text-center mt-[30px] sm:mt-[200px]">
+    
+    <h1
+      class="text-white font-bold
+             text-[2rem] sm:text-[3.5rem]
+             leading-tight"
+    >
+      Unlimited movies, shows, and more
+    </h1>
+
+    <p
+      class="text-white mt-4
+             font-medium
+             text-[1rem] sm:text-[1.25rem]"
+    >
+      Starts at ₹149. Cancel at any time.
+    </p>
+
+    <p
+      class="text-white mt-2
+             text-[0.95rem] sm:text-[1rem]
+             font-normal"
+    >
+      Ready to watch? Enter your email to create or restart your membership.
+    </p>
+
+  </div>
+</div>
+<div
+  class="flex flex-col sm:flex-row
+         items-center
+         gap-4
+         mt-4
+         w-full
+         max-w-[600px]
+         mx-auto
+         px-4"
+>
+  <input
+    type="email"
+    placeholder="Email address"
+    class="w-full sm:w-[366px]
+           h-[56px]
+           text-white
+           bg-black/70
+           text-[1rem]
+           font-normal
+           shadow-xl
+           px-4
+           rounded-lg
+           border border-gray-400"
+  />
+
+  <button
+    class="w-full sm:w-[213px]
+           h-[56px]
+           bg-red-600
+           text-white
+           text-[1.2rem] sm:text-[1.5rem]
+           font-medium
+           rounded-lg"
+  >
+    Get Started &gt;
+  </button>
+</div>
+
+
+</div>
+
+     </div>
+
+               
+  </header>
+    
+ 
+    
+<div class="w-full overflow-hidden bg-black"
+   <main class="bg-black min-h-screen">
+
+  <div class="w-full overflow-hidden">
+    <svg
+      class="w-full h-20"
+      viewBox="0 0 1440 120"
+      preserveAspectRatio="none"
+    >
+      <defs>
+        <linearGradient id="curveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#ff0055" />
+          <stop offset="100%" stop-color="#b100ff" />
+        </linearGradient>
+      </defs>
+
+      <path
+        d="M0,80 
+           C240,40 480,40 720,55 
+           960,70 1200,95 1440,90"
+        fill="none"
+        stroke="url(#curveGrad)"
+        stroke-width="4"
+        stroke-linecap="round"
+      />
+    </svg>
+  </div>
+
+
+  <div class="max-w-[1200px] mx-auto px-8">
+    <h3 class="text-white text-[1.5rem] font-medium mb-4">
+      Trending Now
+    </h3>
+    <div class="grid grid-cols-2 md:grid-cols-5">
+    <!-- CARD -->
+    <!-- CARD IMAGE -->
+    <div id="image"
+      class="w-[200px] h-[300px] rounded-lg transition-transform duration-500 active:scale-[0.95] md:hover:scale-[1.5]
+             bg-[url('https://occ-0-3752-3647.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABXMlNt8lRlEH5nkoYUHkzaYFsKJJvQq-3wQ4-DyYWQmKlxu9qrynyD5cNZEHPowiQL9IPEPbTSBM9B-id8nR8QPVfL1P_CQjPOqe5ZsDbekwH5AVJbhS3v4gSBXhZb4qdcE6.webp?r=e8a)')]
+             bg-cover bg-center"></div>
+             <!-- OVERLAY -->
+<div id="overlay1" class="fixed inset-0 bg-black/70 hidden z-40"></div>
+
+
+<div
+  id="popup1"
+  class="fixed top-1/2 left-1/2
+         -translate-x-1/2 -translate-y-1/2
+         scale-0 opacity-0
+         transition-all duration-500 ease-out
+         w-[90%] max-w-[1000px] h-[560px]
+         rounded-xl overflow-hidden
+         z-50 text-white bg-black">
+
+
+  <div
+  class="absolute inset-0
+         bg-[url('https://occ-0-3752-3647.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABXMlNt8lRlEH5nkoYUHkzaYFsKJJvQq-3wQ4-DyYWQmKlxu9qrynyD5cNZEHPowiQL9IPEPbTSBM9B-id8nR8QPVfL1P_CQjPOqe5ZsDbekwH5AVJbhS3v4gSBXhZb4qdcE6.webp?r=e8a')]
+         bg-no-repeat bg-right bg-contain">
+</div>
+
+ 
+  <div class="absolute inset-0
+            bg-gradient-to-r
+            from-black via-black/80 to-transparent">
+</div>
+<div class="relative z-10 p-12 max-w-[520px]">
+  <h1 class="text-4xl font-extrabold mb-4">
+    STRANGER THINGS
+  </h1>
+
+  <div class="flex flex-wrap gap-2 mb-4 text-sm">
+    <span class="bg-gray-700 px-2 py-1 rounded">2025</span>
+    <span class="bg-gray-700 px-2 py-1 rounded">U/A 16+</span>
+    <span class="bg-gray-700 px-2 py-1 rounded">Show</span>
+    <span class="bg-gray-700 px-2 py-1 rounded">Horror</span>
+    <span class="bg-gray-700 px-2 py-1 rounded">Sci-Fi</span>
+    <span class="bg-gray-700 px-2 py-1 rounded">Drama</span>
+  </div>
+
+  <p class="text-gray-200 mb-8 leading-relaxed">
+    When a young boy vanishes, a small town uncovers a mystery involving
+    secret experiments, terrifying supernatural forces and one strange
+    little girl.
+  </p>
+
+  <button class="bg-red-600 hover:bg-red-700 transition px-8 py-3 rounded text-lg font-semibold">
+    Get Started →
+  </button>
+</div>
+<button
+  id="closeBtn1"
+  class="absolute top-5 right-5 text-2xl z-20">
+  ✕
+</button>
+</div>
+
+
+    
+    <div id="image2"
+      class="w-[200px] h-[300px] rounded-lg transition-transform duration-500 active:scale-[0.95] md:hover:scale-[1.5]
+             bg-[url('https://occ-0-3752-3647.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABVeIHiYaDJJIysNwDA2dgsHF3DpeFf1lXUwfmyaYJGvJxptKGrreOWRiosLCEviE_yZybYWhxEPSmyxoSVNhCycRblBIR_sH38c.webp?r=902)')]
+             bg-cover bg-center">
+    </div>
+    <div id="overlay2" class="fixed inset-0 bg-black/70 hidden z-40"></div>
+
+<div
+  id="popup2"
+  class="fixed top-1/2 left-1/2
+         -translate-x-1/2 -translate-y-1/2
+         scale-0 opacity-0
+         transition-all duration-500 ease-out
+         w-[90%] max-w-[1000px] h-[560px]
+         rounded-xl overflow-hidden
+         z-50 text-white bg-black">
+
+  <div
+  class="absolute inset-0
+        bg-[url('https://occ-0-3752-3647.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABVeIHiYaDJJIysNwDA2dgsHF3DpeFf1lXUwfmyaYJGvJxptKGrreOWRiosLCEviE_yZybYWhxEPSmyxoSVNhCycRblBIR_sH38c.webp?r=902)')]
+         bg-no-repeat bg-right bg-contain">
+</div>
+
+
+  <div class="absolute inset-0
+            bg-gradient-to-r
+            from-black via-black/80 to-transparent">
+</div>
+<div class="relative z-10 p-12 max-w-[520px]">
+  <h1 class="text-4xl font-extrabold mb-4">
+ AKHANDA
+  </h1>
+
+  <div class="flex flex-wrap gap-2 mb-4 text-sm">
+    <span class="bg-gray-700 px-2 py-1 rounded">2025</span>
+    <span class="bg-gray-700 px-2 py-1 rounded">U/A 16+</span>
+    <span class="bg-gray-700 px-2 py-1 rounded">Movie</span>
+    <span class="bg-gray-700 px-2 py-1 rounded">Action</span>
+    <span class="bg-gray-700 px-2 py-1 rounded">Fantasy</span>
+    <span class="bg-gray-700 px-2 py-1 rounded">Dramas</span>
+  </div>
+
+  <p class="text-gray-200 mb-8 leading-relaxed">
+    As biological warfare threatens the country, a scientist seeks a cure. But when dangerous forces target her, a warrior returns to defend humanity.
+  </p>
+
+  <button class="bg-red-600 hover:bg-red-700 transition px-8 py-3 rounded text-lg font-semibold">
+    Get Started →
+  </button>
+</div>
+<button
+  id="closeBtn2"
+  class="absolute top-5 right-5 text-2xl z-20">
+  ✕
+</button>
+</div>
+
+      <div id="image3"
+      class="w-[200px] h-[300px] rounded-lg transition-transform duration-500 active:scale-[0.95] md:hover:scale-[1.5]
+             bg-[url('https://occ-0-3752-3647.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABRyZw5hVzYNlj5cnTUlbq5EqtdSdsAsspntVAHNzTW-VaxaTK4A5d_0pDxPjmoxcs7O51dpWAhCpvB-1r6tBUotO4OHGYteFQzA.webp?r=32c')]
+             bg-cover bg-center">
+    </div>
+    <div id="overlay3" class="fixed inset-0 bg-black/70 hidden z-40"></div>
+
+<!-- POPUP -->
+<div
+  id="popup3"
+  class="fixed top-1/2 left-1/2
+         -translate-x-1/2 -translate-y-1/2
+         scale-0 opacity-0
+         transition-all duration-500 ease-out
+         w-[90%] max-w-[1000px] h-[560px]
+         rounded-xl overflow-hidden
+         z-50 text-white bg-black">
+
+
+  <div
+  class="absolute inset-0
+         bg-[url('https://occ-0-3752-3647.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABRyZw5hVzYNlj5cnTUlbq5EqtdSdsAsspntVAHNzTW-VaxaTK4A5d_0pDxPjmoxcs7O51dpWAhCpvB-1r6tBUotO4OHGYteFQzA.webp?r=32c')]
+         bg-no-repeat bg-right bg-contain">
+</div>
+
+
+  <div class="absolute inset-0
+            bg-gradient-to-r
+            from-black via-black/80 to-transparent">
+</div>
+<div class="relative z-10 p-12 max-w-[520px]">
+  <h1 class="text-4xl font-extrabold mb-4">
+    DE DE PYAAR DE 2
+  </h1>
+
+  <div class="flex flex-wrap gap-2 mb-4 text-sm">
+    <span class="bg-gray-700 px-2 py-1 rounded">2025</span>
+    <span class="bg-gray-700 px-2 py-1 rounded">U/A 13+</span>
+    <span class="bg-gray-700 px-2 py-1 rounded">Movie</span>
+    <span class="bg-gray-700 px-2 py-1 rounded">Comedies</span>
+    <span class="bg-gray-700 px-2 py-1 rounded">Romance</span>
+    <span class="bg-gray-700 px-2 py-1 rounded">Dramas</span>
+  </div>
+
+  <p class="text-gray-200 mb-8 leading-relaxed">
+    When Ashish meets his girlfriend's parents for the first time, their age difference sparks outrage and a madcap plot to drive him out of her life.
+  </p>
+
+  <button class="bg-red-600 hover:bg-red-700 transition px-8 py-3 rounded text-lg font-semibold">
+    Get Started →
+  </button>
+</div>
+<button
+  id="closeBtn3"
+  class="absolute top-5 right-5 text-2xl z-20">
+  ✕
+</button>
+</div>
+      <div id="image4"
+      class="w-[200px] h-[300px] rounded-lg transition-transform duration-500 active:scale-[0.95] md:hover:scale-[1.5]
+             bg-[url('https://occ-0-3752-3647.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABd-hr2-TdXUEamf_D6vpIxJwKZnueEgjHxa05fdGIYTOXwYvXtkrUhfvtySeRKLFhR7MDZG5cNAtmb52qROa-ZKOftFckYIuFKo.webp?r=4a4')]
+             bg-cover bg-center">
+    </div>
+    <div id="overlay4" class="fixed inset-0 bg-black/70 hidden z-40"></div>
+
+<div
+  id="popup4"
+  class="fixed top-1/2 left-1/2
+         -translate-x-1/2 -translate-y-1/2
+         scale-0 opacity-0
+         transition-all duration-500 ease-out
+         w-[90%] max-w-[1000px] h-[560px]
+         rounded-xl overflow-hidden
+         z-50 text-white bg-black">
+
+  <div
+  class="absolute inset-0
+         bg-[url('https://occ-0-3752-3647.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABd-hr2-TdXUEamf_D6vpIxJwKZnueEgjHxa05fdGIYTOXwYvXtkrUhfvtySeRKLFhR7MDZG5cNAtmb52qROa-ZKOftFckYIuFKo.webp?r=4a4')]
+         bg-no-repeat bg-right bg-contain">
+</div>
+
+  <!-- GRADIENT OVERLAY -->
+  <div class="absolute inset-0
+            bg-gradient-to-r
+            from-black via-black/80 to-transparent">
+</div>
+<div class="relative z-10 p-12 max-w-[520px]">
+  <h1 class="text-4xl font-extrabold mb-4">
+    HAQ
+  </h1>
+
+  <div class="flex flex-wrap gap-2 mb-4 text-sm">
+    <span class="bg-gray-700 px-2 py-1 rounded">2025</span>
+    <span class="bg-gray-700 px-2 py-1 rounded">U/A 13+</span>
+    <span class="bg-gray-700 px-2 py-1 rounded">Movie</span>
+    <span class="bg-gray-700 px-2 py-1 rounded">Dramas</span>
+  </div>
+
+  <p class="text-gray-200 mb-8 leading-relaxed">
+    After her husband abandons her, Shazia Bano takes him to court, fueling a national debate on women's rights and justice. Inspired by a landmark judgmen
+  </p>
+
+  <button class="bg-red-600 hover:bg-red-700 transition px-8 py-3 rounded text-lg font-semibold">
+    Get Started →
+  </button>
+</div>
+<button
+  id="closeBtn4"
+  class="absolute top-5 right-5 text-2xl z-20">
+  ✕
+</button>
+</div>
+      <div id="image5"
+      class="w-[200px] h-[300px] rounded-lg transition-transform duration-500 active:scale-[0.95] md:hover:scale-[1.5]
+             bg-[url('https://occ-0-3752-3647.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABTJf3e14TtZ2Z3216UaphDq5nf1SaFyC-0R59wDCSyGdNROqYPTHg8g8SU0kbcn61BMumEkghBN8r11S6_bhQvNJ4oQD4oECM-M.webp?=32c')]
+             bg-cover bg-center">
+    </div>
+    <div id="overlay5" class="fixed inset-0 bg-black/70 hidden z-40"></div>
+
+<!-- POPUP -->
+<div
+  id="popup5"
+  class="fixed top-1/2 left-1/2
+         -translate-x-1/2 -translate-y-1/2
+         scale-0 opacity-0
+         transition-all duration-500 ease-out
+         w-[90%] max-w-[1000px] h-[560px]
+         rounded-xl overflow-hidden
+         z-50 text-white bg-black">
+
+
+  <!-- BACKGROUND IMAGE -->
+  <div
+  class="absolute inset-0
+         bg-[url('https://occ-0-3752-3647.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABTJf3e14TtZ2Z3216UaphDq5nf1SaFyC-0R59wDCSyGdNROqYPTHg8g8SU0kbcn61BMumEkghBN8r11S6_bhQvNJ4oQD4oECM-M.webp?=32c')]
+         bg-no-repeat bg-right bg-contain">
+</div>
+
+  <!-- GRADIENT OVERLAY -->
+  <div class="absolute inset-0
+            bg-gradient-to-r
+            from-black via-black/80 to-transparent">
+</div>
+<div class="relative z-10 p-12 max-w-[520px]">
+  <h1 class="text-4xl font-extrabold mb-4">
+    JOLLY LL.B 3
+  </h1>
+
+  <div class="flex flex-wrap gap-2 mb-4 text-sm">
+    <span class="bg-gray-700 px-2 py-1 rounded">2025</span>
+    <span class="bg-gray-700 px-2 py-1 rounded">U/A 16+</span>
+    <span class="bg-gray-700 px-2 py-1 rounded">Movie</span>
+    <span class="bg-gray-700 px-2 py-1 rounded">Comedies</span>
+    <span class="bg-gray-700 px-2 py-1 rounded">Dramas</span>
+  </div>
+
+  <p class="text-gray-200 mb-8 leading-relaxed">
+    Two advocates with wildly different legal tactics seek justice for a farmer's widow after her late husband lost his land to a major developer.
+  </p>
+
+  <button class="bg-red-600 hover:bg-red-700 transition px-8 py-3 rounded text-lg font-semibold">
+    Get Started →
+  </button>
+</div>
+<button
+  id="closeBtn5"
+  class="absolute top-5 right-5 text-2xl z-20">
+  ✕
+</button>
+</div>
+  </div>
+  <div>
+   <h3 class="text-white text-[1.5rem] font-medium mb-4 pt-[30px]">More reasons to join</h3>
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-6xl mx-auto ">
+  <div class="relative min-h-[220px] p-6 bg-[#1a1a1a] text-white rounded-xl transition-transform duration-500 hover:scale-125">
+    
+    <h1 class="text-xl font-bold mb-2">Enjoy on your TV</h1>
+    <p class="text-sm text-gray-400">
+      Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.
+    </p>
+
+    <svg class="absolute bottom-4 right-4 w-16 h-16" viewBox="0 0 72 72">
+  <defs>
+    <radialGradient id="tvGradient">
+      <stop offset="0%" stop-color="#ff6a00"/>
+      <stop offset="100%" stop-color="#e50914"/>
+    </radialGradient>
+  </defs>
+
+  <path
+    d="M63 12H9C8 12 7.2 12.8 7.2 13.8V51.6C7.2 52.6 8 53.4 9 53.4H63C64 53.4 64.8 52.6 64.8 51.6V13.8C64.8 12.8 64 12 63 12Z"
+    fill="url(#tvGradient)"
+  />
+</svg>
+
+  </div>
+   <div class="relative min-h-[220px] p-6 bg-[#1a1a1a] text-white rounded-xl transition-transform duration-500 hover:scale-125">
+    
+    <h1 class="text-xl font-bold mb-2">Download your shows to watch offline</h1>
+    <p class="text-sm text-gray-400">
+      Save your favourites easily and always have something to watch.
+    </p>
+
+    <svg class="absolute bottom-4 right-4 w-16 h-16" viewBox="0 0 72 72">
+
+  <defs>
+    <radialGradient id="downloadGradient">
+      <stop offset="0%" stop-color="#ff9a9e"/>
+      <stop offset="100%" stop-color="#e50914"/>
+    </radialGradient>
+  </defs>
+
+  <circle cx="36" cy="36" r="28" fill="url(#downloadGradient)" />
+  <path d="M36 18V42" stroke="#fff" stroke-width="4"/>
+  <path d="M26 34L36 44L46 34" stroke="#fff" stroke-width="4"/>
+</svg>
+
+
+  </div>
+   <div class="relative min-h-[220px] p-6 bg-[#1a1a1a] text-white rounded-xl transition-transform duration-500 hover:scale-125">
+    
+    <h1 class="text-xl font-bold mb-2">Watch everywhere
+</h1>
+    <p class="text-sm text-gray-400">
+     Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV..
+    </p>
+
+    <svg class="absolute bottom-4 right-4 w-16 h-16" viewBox="0 0 72 72">
+  <defs>
+    <radialGradient id="watchGradient">
+      <stop offset="0%" stop-color="#c471f5"/>
+      <stop offset="100%" stop-color="#e50914"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="14" y="18" width="44" height="28" rx="6" fill="url(#watchGradient)"/>
+  <rect x="30" y="48" width="12" height="6" fill="#fff"/>
+</svg>
+
+
+  </div>
+   <div class="relative min-h-[220px] p-6 bg-[#1a1a1a] text-white rounded-lg transition-transform duration-500 hover:scale-125">
+    <h1 class="text-xl font-bold mb-2">Create profiles for kids</h1>
+    <p class="text-sm text-gray-400">e rounded-xl">
+     Send kids on adventures with their favourite characters in a space made just for them — free with your membership.
+    </p>
+
+    <svg class="absolute bottom-4 right-4 w-16 h-16" viewBox="0 0 72 72">
+  <defs>
+    <radialGradient id="watchGradient">
+      <stop offset="0%" stop-color="#c471f5"/>
+      <stop offset="100%" stop-color="#e50914"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="14" y="18" width="44" height="28" rx="6" fill="url(#watchGradient)"/>
+  <rect x="30" y="48" width="12" height="6" fill="#fff"/>
+</svg>
+
+
+  </div>
+</div>
+
+
+ </div>
+ <div >
+ <h2 class="text-white text-[1.5rem] font-medium pt-[1rem]">Frequently Asked Questions</h2>
+ <div class=" text-white">
+ <h3 class="question max-w-[1200px] bg-[#1A1A1A] mt-[1rem] font-bold text-[1.5rem] h-[84px] p-[1.5rem] 
+           flex items-center justify-between">What is Netflix?  <span class="icon">+</span></h3>
+ <p class="answer max-w-[1200px] bg-[#1A1A1A] text-[1.5rem] p-[1.5rem] font-medium">Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.
+
+You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!<p>
+
+ </div>
+
+ <div class=" text-white">
+ <h3 class="question max-w-[1200px] bg-[#1A1A1A] mt-[1rem] font-bold text-[1.5rem] h-[84px] p-[1.5rem] 
+           flex items-center justify-between">How much does Netflix cost?  <span class="icon ">+</span></h3>
+ <p class="answer hidden max-w-[1200px] bg-[#1A1A1A] text-[1.5rem] p-[1.5rem] font-medium">Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹149 to ₹649/month.<p>
+
+ </div>
+
+ <div class=" text-white">
+ <h3 class="question max-w-[1200px] bg-[#1A1A1A] mt-[1rem] font-bold text-[1.5rem] h-[84px] p-[1.5rem] 
+           flex items-center justify-between">Where can I watch?  <span class="icon">+</span></h3>
+ <p class="answer hidden max-w-[1200px] bg-[#1A1A1A] text-[1.5rem] p-[1.5rem] font-medium">Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
+
+You can also download your favourite shows with the iOS or Android app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.<p>
+
+ </div>
+
+ <div class=" text-white">
+ <h3 class="question max-w-[1200px] bg-[#1A1A1A] mt-[1rem] font-bold text-[1.5rem] h-[84px] p-[1.5rem] 
+           flex items-center justify-between">How do I cancel?.  <span class="icon">+</span></h3>
+ <p class="answer hidden max-w-[1200px] bg-[#1A1A1A] text-[1.5rem] p-[1.5rem] font-medium">Netflix is flexible. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.<p>
+
+ </div>
+
+ <div class=" text-white">
+ <h3 class="question max-w-[1200px] bg-[#1A1A1A] mt-[1rem] font-bold text-[1.5rem] h-[84px] p-[1.5rem] 
+           flex items-center justify-between">What can I watch on Netflix?  <span class="icon">+</span></h3>
+ <p class="answer hidden max-w-[1200px] bg-[#1A1A1A] text-[1.5rem] p-[1.5rem] font-medium">Netflix has an extensive library of feature films, documentaries, shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.<p>
+
+ </div>
+
+ <div class=" text-white">
+ <h3 class="question max-w-[1200px] bg-[#1A1A1A] mt-[1rem] font-bold text-[1.5rem] h-[84px] p-[1.5rem] 
+           flex items-center justify-between">Is Netflix good for kids? <span class="icon">+</span></h3>
+ <p class="answer hidden max-w-[1200px] bg-[#1A1A1A] text-[1.5rem] p-[1.5rem] font-medium">The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space.
+
+Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.<p>
+
+ </div>
+
+ </div>
+<div >
+ <p class="text-center:max-w-[1200px] mt-[100px] text-white text-center">Ready to watch? Enter your email to create or restart your membership.</p>
+ </div>
+<div class="mt-[30px] md:flex flex-row item-center justify-space mx-auto">
+        <input type="email" placeholder="Email Address" name="Email Address" class="w-[561px] h-[56px] text-white text-size-[1rem]mt-[20px] ml-[150px] font-normal shadow-xl/30 p-[24px_16px_8px] rounded-lg"></input>
+        <button class="w-[213px] h-[56px] mx-auto md:mt-[20px] ml-[35px] bg-red-600 text-white text-[1.5rem] font-medium rounded-lg"> Get Started ></button>
+      </div>
+
+
+</main>
+
+<footer>
+   <div class="text-white">
+     <p class="ml-[150px] mt-[50px] text-[1rem]">Questions? Call 000-800-919-1743</p>
+     <div class="max-w-[1200px] mx-auto mt-[50px] grid grid-flow-col grid-rows-4 gap-4">
+      <div class="">
+        <ul>
+        <li>
+          <a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+         <ul>
+        <li>
+          <a href="#">Investor Relations</a></li>
+          </ul>
+        </div>
+        <div>
+        <ul>
+        <li>
+          <a href="#">Privacy</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+        <li>
+          <a href="#">Speed Test</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+        <li>
+          <a href="#">Help Centre</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+        <li>
+           <a href="#">Jobs</a></li>
+          </ul>
+        </div>
+        <div>
+        <ul>
+        <li>
+          <a href="#">Cookie Preferences</a></li>
+          </ul>
+        </div>
+        <div><ul><li>
+           <a href="#">Legal Notices</a></li></ul></div>
+        
+        <div><ul> <li>
+           <a href="#">Account</a></li></ul></div>
+        <div><ul> <li>
+           <a href="#">Ways to Watch</a></li></ul></div>
+        <div><ul> <li>
+           <a href="#">Corporate Information</a></li></ul></div>
+         <div><ul> <li>
+           <a href="#">Only on Netflix</a></li></ul></div>
+       
+           <div><ul> <li>
+           <a href="#">Media Centre</a></li></ul></div>
+            <div><ul> <li>
+           <a href="#">Terms of Use</a></li></ul></div>
+            <div><ul> <li>
+           <a href="#">Contact Us</a></li></ul></div>
+     </div>
+   </div>
+   <div class="text-white">
+            <select class="text-white border border-gray-400  w-[134px] h-[32px] bg-black ml-[150px] mt-[20px] text-center">
+            >
+              <option>English</option>
+              <option>Hindi</option>
+            </select>
+            <p class="mt-[50px] ml-[150px]">Netflix India</p>
+            <div class="flex gap-4 mt-[40px]">
+              <p class=" ml-[150px]">This page is protected by Google reCAPTCHA to ensure you're not a bot</p>
+              <a href="#">Learn more.</a>
+            </div>
+   </div>
+</footer>
+</div>
+
+
+
+  </body>
+  <script src="app.js"></script>
+</html>
